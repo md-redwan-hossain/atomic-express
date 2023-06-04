@@ -165,6 +165,7 @@ class YayPress:
         self.download_ts_config()
         self.download_eslint_node_config()
         self.file_creator(".env")
+        self.file_creator("sample.env")
         self.file_creator(".gitignore")
         gitignore_texts = ["node_modules","\n.env","\ndist"]
         env_texts = ["SERVER_PORT=","\nSERVER_IP=","\nJWT_SECRET=","\nMONGODB_URL="]
@@ -175,6 +176,7 @@ class YayPress:
 
         for text in env_texts:
             self.write_in_file(".env",text)
+            self.write_in_file("sample.env",text)
 
         for text in readme_texts:
             self.write_in_file("README.md",text)
