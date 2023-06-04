@@ -96,10 +96,12 @@ class YayPress:
             os.remove(f"{self.BASE_DIR}/tsconfig.json")
         wget.download(self.TS_CONFIG_URL, f"{self.BASE_DIR}/tsconfig.json")
 
+
     def download_ts_global_type_file(self) -> None:
         if (os.path.exists(f"{self.BASE_DIR}/src/globalTypes.d.ts")):
             os.remove(f"{self.BASE_DIR}/src/globalTypes.d.ts")
         wget.download(self.TS_GLOBAL_TYPE_FILE_URL, f"{self.BASE_DIR}/src/globalTypes.d.ts")
+
 
     def file_creator(self,file_path:str)-> None:
         try:
@@ -145,6 +147,8 @@ class YayPress:
         for file in macro_files:
             self.file_creator(f"{self.BASE_DIR}/src/{file}")
 
+        self.file_creator(f"{self.BASE_DIR}/README.md")
+
 
 
     def express_with_ts_full_setup(self) -> None:
@@ -164,12 +168,16 @@ class YayPress:
         self.file_creator(".gitignore")
         gitignore_texts = ["node_modules","\n.env","\ndist"]
         env_texts = ["SERVER_PORT=","\nSERVER_IP=","\nJWT_SECRET=","\nMONGODB_URL="]
+        readme_texts = ["This project is scaffolded by [YayPress](https://github.com/md-redwan-hossain/yaypress)","\n\nStart development server: `npm run dev`", "\n\nTranspile project ((TS -> JS): `npm run build`"]
 
         for text in gitignore_texts:
             self.write_in_file(".gitignore",text)
 
         for text in env_texts:
             self.write_in_file(".env",text)
+
+        for text in readme_texts:
+            self.write_in_file("README.md",text)
 
 
 
