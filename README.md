@@ -1,5 +1,12 @@
 ## YayPress: Modular ExpressJS Project Structure Generator with Typescript
 
+### Structure explanation:
+
+- The structure is divided into `macro` and `micro` directory.
+- In `macro`, all the reuseable stuffs are wrrien.
+- `micro` contains individual modules that are independent and reuse code from `macro`
+- Example, for a blog management system, `micro` can possibly contain `user`, `content` module while `macro` can contain reuseable validation logics.
+
 
 ### Features:
 - Full project setup
