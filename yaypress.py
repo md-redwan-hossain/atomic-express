@@ -36,7 +36,7 @@ class YayPress:
     def __init__(self) -> None:
         self.BASE_DIR = os.path.abspath(os.getcwd())
 
-        self.ESLINT_NODE_CONFIG_URL = "https://gist.githubusercontent.com/md-redwan-hossain/ff27ae60a59b20cefc4217e3fa59e663/raw/3bca1e9e7d66156566844d2bf63ccafa60665507/.eslintrc.json"
+        self.ESLINT_NODE_CONFIG_URL = "https://raw.githubusercontent.com/md-redwan-hossain/yaypress/main/.eslintrc.json"
 
         self.TS_CONFIG_URL = "https://raw.githubusercontent.com/md-redwan-hossain/yaypress/main/tsconfig.json"
 
