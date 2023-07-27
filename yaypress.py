@@ -38,7 +38,7 @@ class YayPress:
 
         self.ESLINT_NODE_CONFIG_URL = "https://gist.githubusercontent.com/md-redwan-hossain/ff27ae60a59b20cefc4217e3fa59e663/raw/3bca1e9e7d66156566844d2bf63ccafa60665507/.eslintrc.json"
 
-        self.TS_CONFIG_URL = "https://gist.githubusercontent.com/md-redwan-hossain/5ab953334fa85cf6f687f6f39b9826ca/raw/e33374de4377b55a90f2557e50b9bb8647cb4272/tsconfig.json"
+        self.TS_CONFIG_URL = "https://raw.githubusercontent.com/md-redwan-hossain/yaypress/main/tsconfig.json"
 
         self.TS_GLOBAL_TYPE_FILE_URL = "https://gist.githubusercontent.com/md-redwan-hossain/87ccf85a1558a59d65b2cf6359ec8a42/raw/159ce57faab98cf388a50c40e2007a80ed354ff4/globalTypes.d.ts"
 
