@@ -2,7 +2,7 @@ namespace AtomicExpress;
 
 public static class EnhancedConsole
 {
-    public static void WriteColoredLine(string value, ConsoleColor textColor,
+    private static void WriteInConsole(string text, ConsoleColor textColor,
         ConsoleColor? backgroundColor = null, bool newLine = true)
     {
         Console.ForegroundColor = textColor;
@@ -11,10 +11,23 @@ public static class EnhancedConsole
             Console.BackgroundColor = (ConsoleColor)backgroundColor;
 
         if (newLine)
-            Console.WriteLine(value);
+            Console.WriteLine(text);
         else
-            Console.Write(value);
+            Console.Write(text);
 
         Console.ResetColor();
     }
+
+
+    public static void WriteColoredLine(string text, ConsoleColor textColor) =>
+        WriteInConsole(text, textColor);
+
+
+    public static void WriteColoredLine(string text, ConsoleColor textColor,
+        ConsoleColor textBackgroundColor) =>
+        WriteInConsole(text, textColor, textBackgroundColor);
+
+    public static void WriteColoredLine(string text, ConsoleColor textColor,
+        ConsoleColor textBackgroundColor, bool newLine) =>
+        WriteInConsole(text, textColor, textBackgroundColor, newLine);
 }
