@@ -4,13 +4,7 @@ namespace AtomicExpress;
 public class DownloadManager
 {
     private readonly HttpClient _httpClient;
-
-
-    public DownloadManager()
-    {
-        _httpClient = new HttpClient();
-
-    }
+    public DownloadManager() => _httpClient = new HttpClient();
 
     public async Task<bool> Download(string url, string path, string fileName)
     {
