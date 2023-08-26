@@ -1,4 +1,4 @@
-## YayPress: Modular ExpressJS Project Structure Generator with Typescript
+## atomic-express: Modular ExpressJS Project Structure Generator with Typescript
 
 ### Structure explanation:
 
@@ -18,8 +18,8 @@
 **For directly running from terminal, you can use bash aliasing by the following command:**
 <br>
 
-`curl -O --output-dir "$HOME" https://raw.githubusercontent.com/md-redwan-hossain/yaypress/main/yaypress.py && echo 'alias yaypress="python3 $HOME/yaypress.py"' >>~/.bashrc && source ~/.bashrc`
+`curl -O --output-dir "$HOME" https://raw.githubusercontent.com/md-redwan-hossain/atomic-express/main/atomic-express.py && echo 'alias atomic-express="python3 $HOME/atomic-express.py"' >>~/.bashrc && source ~/.bashrc`
 
-**Now just type `yaypress` in the terminal to use YayPress.**
+**Now just type `atomic-express` in the terminal to use atomic-express.**
 
 
