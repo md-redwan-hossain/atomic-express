@@ -36,11 +36,11 @@ class YayPress:
     def __init__(self) -> None:
         self.BASE_DIR = os.path.abspath(os.getcwd())
 
-        self.ESLINT_NODE_CONFIG_URL = "https://raw.githubusercontent.com/md-redwan-hossain/yaypress/main/.eslintrc.json"
+        self.ESLINT_NODE_CONFIG_URL = "https://raw.githubusercontent.com/md-redwan-hossain/atomic-express/main/.eslintrc.json"
 
-        self.TS_CONFIG_URL = "https://raw.githubusercontent.com/md-redwan-hossain/yaypress/main/tsconfig.json"
+        self.TS_CONFIG_URL = "https://raw.githubusercontent.com/md-redwan-hossain/atomic-express/main/tsconfig.json"
 
-        self.TS_GLOBAL_TYPE_FILE_URL = "https://raw.githubusercontent.com/md-redwan-hossain/yaypress/main/globalTypes.d.ts"
+        self.TS_GLOBAL_TYPE_FILE_URL = "https://raw.githubusercontent.com/md-redwan-hossain/atomic-express/main/globalTypes.d.ts"
 
 
     def empty_dir_checker(self):
@@ -157,7 +157,7 @@ class YayPress:
         os.system('npm pkg set type="module"')
         os.system('npm pkg set scripts.dev="NODE_ENV=development nodemon --esm --files ./src/server.ts"')
         os.system('npm pkg set scripts.build="npx tsc"')
-        os.system("npm i express express-validator cookie-parser http-errors multer helmet jsonwebtoken dotenv bcrypt cors mongoose morgan nodemailer node-cache rate-limiter-flexible validator luxon")
+        os.system("npm i express http-status cookie-parser http-errors multer helmet jsonwebtoken dotenv bcrypt cors morgan nodemailer node-cache rate-limiter-flexible validator luxon")
         os.system("npm i -D typescript ts-node nodemon @types/node @types/express @types/cookie-parser @types/jsonwebtoken @types/bcrypt @types/cors @types/morgan @types/nodemailer @types/http-errors @types/luxon @types/multer eslint-import-resolver-typescript @types/validator")
         os.system("npm i -D eslint typescript prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-import @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-airbnb eslint-config-airbnb-typescript eslint-plugin-promise eslint-plugin-n eslint-import-resolver-typescript")
         self.macro_level_creator()
